@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bc-bench"
+version = "0.1.0"
+description = "Synthetic benchmark generator for the bc-bench benchmark"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+bc-bench = "bc_bench.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["bc_bench"]
